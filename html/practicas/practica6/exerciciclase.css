@@ -1,0 +1,30 @@
+
+
+.numero{
+
+    color: white;
+    background-color: purple;
+    height: 20vh;                   /*para hacer el cuadrado*/
+    width: 20vh;
+    margin: 1vh;
+    font-size: 15vh;
+    text-align: center;
+    
+    display:flex;                 /*  para centrar el número, también se podría con el padding.                 */
+    align-items: center;          /*  entonces en el hover se modificaría el padding en vez del width & height  */
+    justify-content: center; 
+}
+
+
+#container{
+    display: flex;
+    flex-wrap: wrap;        /*lo hace en varias lineas*/
+    flex-direction: row;    /*creo que no hace falta*/
+
+}
+
+.numero:hover{
+    width: 42vh;
+    height: 42vh;
+    transition: 1s;
+}

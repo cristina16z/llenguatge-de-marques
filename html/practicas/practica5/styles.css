@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap'); /*Importar la tipografía*/
+
+*{
+    font-family:'lato', sans-serif;
+    margin: 0px;                    /*per eliminar l'espaiat*/
+    padding: 0px;
+}
+
+
+header{
+    color: white;                  /*por defecto sería negro. También se podría cambiar haciendolo aparte con h1*/
+   background-color: black; 
+   text-align: center;          
+   position:fixed;                   /*al estar fijo, siempre veremos el header aunque bajemos hacia abajo */
+   width:100vw;                      /*Tamaño del cuadrado header*/
+   height: 15vh;                    /*Cómo si fueran %--> 100% ancho y 20% altura*/
+   padding-top: 30px;
+   margin-top:-10vw;                /*para visualizar el header y que el main no se superponga por encima*/
+} 
+
+nav{
+    margin-top: 10px;
+}
+
+
+
+/*LINK*/
+a{
+    color: white;                       /*que se vea blanco el link */ 
+    padding-right: 7px;                    /*para que | no quede tan pegado al texto*/
+    padding-left: 7px;
+    
+}
+
+.s2 {border-right: 1px solid white;      /*las | separadoras */
+    border-left: 1px solid white;
+}
+
+a:hover{
+    color: red;                     /*al pasar por encima del link cambie de color */
+}
+/*por defecto viene azul, no cambia de color al pasar por encima, pero al clickar cambia de color a rojo*/
+
+
+main{
+   margin-top: 140px;   /*para encontrar el header*/
+    top: 200px;         /*para el header, ya que al estar fijo, el header perdió su casilla
+                        y con ésto recuperamos éste margen, espacio para que el header esté arriba de todo*/
+}
+
+
+
+/*MAIN > SECCIONES*/
+
+section{
+
+    background-color: rgb(189, 129, 236);
+    margin: 0px 10px 20px 10px;     /*para separar y que haya unos márgenes entre cada sección. top, bottom, left,right */
+    padding: 10px 0px 10px 30px;    /*para posicionar bien el texto dentro del la sección. top, right, bottom, left*/
+                                    /*pondremos 0 margin top para que no quede márgen arriba de todo */
+}
+
+#Others{
+    background-color:rgb(171, 71, 247);     /*Otro color ésta sección */
+}
+
+#Others p{
+    margin-left: 50px;              /*Texto de "others" tenga éste márgen de la izquierda */
+}
+p{
+    margin-top: 20px;               /*Todos los paragrafs: Márgen para situar el texto dentro de la sección*/
+}
+
+
+
+/*PIE de Página */
+footer{
+    background-color:black;
+    color: white;
+    text-align: center;
+    position:relative;
+    padding-top: 10px;               /*márgen arriba y abajo del texto respecto la sección negra footer */
+    padding-bottom: 10px;
+    top: 200px;                      /*situar el pie de página abajo de todo, márgen del top 200px */
+    margin-top: 30px;                 /*tenga un márgen respecto el resto de cosas  ??*/ 
+} 

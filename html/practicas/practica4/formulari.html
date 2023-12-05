@@ -1,0 +1,124 @@
+<!--
+Adrián Navarro
+Cristina Val
+DAW1 25/10/2023
+-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formulari.css">
+    <title>Formulario</title>
+</head>
+
+<body>
+
+    <h1>Suscribete a nuestro boletín!</h1>
+
+    <form action="formulari_enviat.html">
+
+        <div>
+            <p>Información personal</p>
+            <!--CASILLAS DEL FORMULARIO PARA LLENAR CON LOS DATOS CORRESPONDIENTES-->
+            <label for="formNombre">Nombre</label><!--la etiqueta label con el for se vincula con el input id-->
+            <br>
+            <input id="formNombre" type="text" class="textPx" required> <!--required= resposta obligatoria-->
+            <br>
+
+            <label for="formApellidos">Apellidos</label>
+            <br>
+            <input id="formApellidos" type="text" class="textPx" required>
+            <!--class ="textPX" definimos ésta clase para que en el css podamos definir sus píxeles -->
+            <br>
+
+            <label for="forEmail">Correo Electrónico</label>
+            <br>
+            <input id="formEmail" type="email" class="textPx">
+            <br>
+
+            <label for="formUbicacion">Ubicación</label>
+            <br>
+            <input id="formUbicacion" type="text" required class="textPx">
+            <br>
+
+            <!--Para que solo se puedan poner 9 digitos en la casilla del telefono y que solo se puedan utilizar numeros, 
+            hay que poner el atributo pattern. el "[0-9]" significa que se puede poner del 0 al 9 y el "{9}" significa que son 9 caracteres/digitos, en este caso digitos. -->
+            <label for="formTelefono">Teléfono</label>
+            <br>
+            <input id="formTelefono" type="tel" pattern="[0-9]{9}" required>
+            <br>
+
+            <label for="formEdad">Edad</label>
+            <br>
+            <input id="formEdad" type="number" pattern="[0-9]" required>
+        </div><br><br>
+         
+
+        <div> <!--DROPDOWN-->
+            <label for="formIdioma" id="idioma">Idioma</label>
+            <br>
+            <select id="formIdioma" required>
+                <option>Castellano</option>
+                <option>Català</option>
+                <option>Inglés</option>
+                <option>Francés</option>
+                <option>Aleman</option>
+            </select>
+        </div>
+
+
+        <div> <!--RADIO BUTTONS-->
+            <p id="genero">Género</p>
+
+            <input id="formGeneroM" type="radio" name="genere" checked>
+            <!--checked = es que ya está marcado por defecto-->
+            <label for="formGeneroM">Mujer</label>
+            <br>
+
+            <input id="formGeneroH" type="radio" name="genere">
+            <label for="formGeneroH">Hombre</label>
+            <br>
+
+            <input id="formOtros" type="radio" name="genere">
+            <label for="formOtros">Otros</label>
+
+        </div><br>
+
+        <div> <!--CHECKBOX-->
+            <p>Suscribete</p>
+            <input id="formSubs" type="checkbox" checked>
+            <label for="formSubs">Boletin de noticias</label>
+            <br>
+
+            <input id="formSubsJuegos" type="checkbox">
+            <label for="formSubsJuegos">Boletin de Videojuegos</label>
+            <br>
+
+            <input id="formSubsTecnologia" type="checkbox">
+            <label for="formSubsTecnologia">Boletin de Tecnologia</label>
+            <br>
+
+            <input id="formSubsGastro" type="checkbox">
+            <label for="formSubsGastro">Boletin de Gastronomia</label>
+        </div><br>
+
+
+        <div>
+            <label for="formTexto">Coméntanos algun otro tema de interés!</label>
+            <br><br>
+            <textarea id="formTexto" placeholder="Me gustaría saber las últimas novedades sobre..." rows="10"
+                cols="50"></textarea>
+            <!--textarea es para crear el cuadro de texto,
+        y para definir su tamaño se usa el rows que es el nº de filas y cols nº de columnas.
+        Después, el placeholder ajuda a l'usuari a saber que introduir-->
+        </div><br>
+
+        <button type="submit"><span>Suscríbeme</span></button> <!--BOTÓ PER ANAR A UNA ALTRE PÀGINA amb l'animació de l'etiqueta span-->
+
+    </form>
+
+</body>
+
+</html>

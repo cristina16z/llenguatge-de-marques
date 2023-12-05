@@ -1,0 +1,117 @@
+/*Importar google font "LATO"*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/*Se aplica a todos los elementos de los 2 documentos. Resumen: para cambiar el color del fondo de la página, letra y márgen izq*/
+* {
+    background-color: #E4DFDA;
+    font-family: 'Lato', sans-serif;
+    margin-left: 4px;
+    /*márgen de la izquierda */
+}
+
+
+/*clase hecha para modificar la amplada,  el ancho de las entradas de texto*/
+.textPx {
+    width: 300px;
+    padding: 5px; /* Márgen de dentro*/
+}
+
+
+/*Se define el mismo ancho para los 2 campos, casillas del formulario (para la entrada numérica de la práctica)*/
+#formTelefono,
+#formEdad {
+    width: 100px;
+}
+
+
+/*para los 2 button que hay 1 en cada pagina. Cambia su tamaño predefinido, color sólido de fondo, márgenes y negrita*/
+button {
+    height: 50px;
+    width: 100px;
+    background-color: #A18F7D;  
+    margin-top: 20px;
+    font-weight: bold;
+    transition: all 0.5s;   /*para la animación se hagan los cambios de color al poner el cursor por encima*/
+    cursor: pointer;
+}
+
+
+/*para cuando el cursor pasa por encima de los botones, cambia su color*/
+button:hover {
+    background-color: #BAADA0;
+}
+
+
+/*se aplica a todos los elementos pero como en esta pagina solo hay campos y botones se aplica a los input y buttons. 
+Resumen: cuando clicas en ése elemento cambia el fondo de color, borde,.., es decir tiene un efecto*/
+*:focus {
+    border: 4px solid #BAADA0;
+    background-color: #D4CCC4;
+}
+
+
+
+/*FIN PRÁCTICA */
+
+
+h1 {
+    color: #A18F7D;
+}
+
+/*modifica el tamaño de todas las labels a nivel de ancho y pone 100px márgen derecho*/
+label {
+    width: 800px;
+    margin-right: 100px;
+}
+
+/*modificar margenes de todos los input tanto casillas cómo checkbox, etc..*/
+input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*pone en negrita todos los títulos hechos con P incluyendo + el id = idioma, menos, dejando de lado el Comentanos bla bla  */
+p,
+#idioma {
+    font-weight: bold;
+}
+
+/*añade un márgen arriba de Idioma*/
+#formIdioma {
+    margin-top: 20px;
+}
+
+#genero {
+    margin-top: 40px;
+}
+
+/*Animación del button */
+                                        /*para los 2 buttons*/
+button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    background-color: #A18F7D;
+}
+
+button span::after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    
+}
+
+                                        /*el cursor pase por encima*/
+button:hover span {
+    padding-right: 10px;
+    background-color: #BAADA0;
+}
+
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+}

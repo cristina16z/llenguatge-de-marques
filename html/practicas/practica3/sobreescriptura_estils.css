@@ -1,0 +1,62 @@
+/*1. color general de la lletra negra*/
+
+* {
+    color: black;
+}
+
+/*2. titol nivell 1 fons blanc lletra gris*/
+
+#titol-pagina {
+    color: gray;    
+    background-color: white;
+}
+
+/*3. tots els strong en color verd i subratllats*/
+
+strong, .paragraf2 strong {
+    color: green;
+    text-decoration: underline;
+}
+
+/*4. enllaços del paràgraf2 en italica*/
+
+ .paragraf2  a {
+    font-style: italic;
+}
+
+/*5. footer general del web centrat i lletra de 10px*/
+
+div > footer {
+    text-align: center;
+    font-size: 10px;
+}
+
+/*6. Canvia l'ordre de càrrega dels fitxers i mira què passa. Sabries modificar el teu codi per a que se seguís veient igual que abans de canviar l'ordre?*/
+
+/* Al canviar l'ordre de càrrega dels fitxers, ara els estils que s'utilitzen són els del segon css, ja que s'agafa l'últim. Per exemple,
+si als 2 css hi ha un mateix selector i es posa exactament el mateix estil, s'agafara l'estil de l'últim arixu que hi ha carregat. 
+
+Els elements que passen a veure's diferent són:
+
+- Tots els strongs han canviat, deixant el subratllat però el color s'ha canviat. 
+Perquè com que he seleccionat de la mateixa manera per etiqueta i per espai, el color que es posa es el del segon css i el subratllat es deixa ja que no hi ha res que li doni la contrària. 
+
+- Les cursives del segon paràgraf no han canviat ja que tenen prioritat perquè a "estils_inicials.css" s'ha seleccionat amb etiqueta. 
+
+- El footer segueix igual (el que hem centrat), perquè en l'altre arxiu (estils_inicials.css) no posa cap estil.
+
+- El títol principal segueix igual ja que s'ha utilitzat id i aquest té prioritat. 
+
+Per a aconseguir que tots els fitxers es segueixin veient igual abans d'invertir l'ordre, s'han de fer el següents canvis:
+
+.paragraf1 strong, div .paragraf2 strong {
+    color: green;
+    text-decoration: underline;
+}
+
+he afegit .paragraf1 strong per a que tingui més prioritat que la selecció d'etiqueta que hi ha a l'altre fitxer.
+Del .paragraf2 strong he afegit div ja que era la mateixa selecció que "estils_inicials" i com que estaba després aquest fitxer, es posaba de color blau.
+Llavors he afegit div amb selector d'espai per a que així tingui més prioritat.
+Aixó seria que agafi els strong que hi ha dintre de la classe .paragraf i que agafi (la coma) els strong que hi ha dintre de la classe .paragraf que alhora està dintre d'un div.  
+
+*/

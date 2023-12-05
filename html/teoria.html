@@ -1,0 +1,284 @@
+<!DOCTYPE html> <!--Ordenar estructura del código: alt + shift + F-->
+<html lang="es">
+
+
+<head> <!--Meta Datos, que cómo usuario no lo ves--> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias NaVal.com</title>           <!--cómo se llama la pestañita-->
+    <link rel="stylesheet" href="external.css"> <!--External CSS. Se define en el head un enlace a un fichero externo formato .css-->
+    
+    <!-- Internal CSS-->
+    <style> 
+        h1{
+            background-color: yellow;
+            text-align: center;
+        }
+        h2{
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+
+
+<body> <!--Inicio Body (Contenido del Documento HTML)-->
+
+    <h1 style="color:red; text-align: center;"> TEORÍA</h1> <!--Inline CSS. Dentro del Body-->
+    <h2> Título 2</h2> <!-- <h2 id="subt"> Para ponerle una etiqueta y luego en style mencionarlo cómo #subt-->
+
+    <p>
+        párrafo
+    </p>
+
+    <p>
+        <br> dejar espacio entre párrafo y párrafo
+    </p>
+
+    <img src="https://pngimg.com/uploads/google/google_PNG102344.png" height="50%" width="50%" alt="Foto Google"> <!-- mostrar imagen de un link-->
+
+      
+    <h2>Llista ordenada</h2>
+    <ol>  
+        <li>    <a href="https://www.msn.com/es-es/">MSN</a>                </li>               <!--li cada elemento que hay en la lista-->
+        <li>    <a href="https://www.lavanguardia.com/">La Vanguardia</a>   </li>       <!--    <a href ="">  es el link para enlazar> al texto que se quiere mostrar-->
+        <li>    <a href="https://www.20minutos.es/"> 20minutos</a>          </li>       <!--si fuera una carpeta <a href="/carpeta/taules.html">link</a>-->
+    </ol> 
+    
+      
+    <h2>Llista NO ordenada</h2>
+    <ul> 
+        <li>nombre del elemento de la lista</li>
+        <li>Apple saca su nuevo Iphone 1</li>
+        <li>Nombre del elemento de la lista</li>  
+    </ul> 
+
+    <h2>TABLA</h2>
+    <table>
+        <caption>Título de la tabla</caption>
+
+        <tr> 
+            <th> Capçaleres de la tabla por columna 1</th> <!--TH, CAPÇALERES -->
+            <th> Capçaleres de la tabla por columna 2</th>
+            <th> Capçaleres de la tabla por columna 3</th>
+        </tr>
+
+        <tr>
+            <td>Contenido fila 2, columna 1</td> <!--TD, CONTINGUT-->
+            <td>Contenido fila 2, columna 2 </td>
+            <td>Contenido fila 2, columna 3 </td>
+        </tr>
+
+        <tr>
+            <td>Contenido fila 3, columna 1</td>
+            <td>Contenido fila 3, columna 2 </td>
+            <td>Contenido fila 3, columna 3 </td>
+        </tr>
+    </table>
+        <!--
+        
+    CSS
+
+        color: #color;
+        background-color: #color;   
+        text-align:center;          alinear al centro
+        font-weight:bold;           Negrita
+        font-family:                Tipografía
+        font-size: 5px;             tamaño de la letra
+        font-style: italic;         Estilo de fuente
+        bordercollapse:             1 sólo borde compartido con las diferentes celdas creo q poniendolo sólo en table funciona
+        border: 1px black solid     es el grosor y color del borde de las celdas
+        margin: auto;               Márgenes
+        margin-bottom: 5px;         márgenes hacia abajo, left izquierda, top arriba, right derecha
+        witdth:300px;               //per fer que una entrada de txt tingui una amplada de 300 píxels (formulari)
+
+
+    TABLA
+
+        table{contenido exterior de la tabla}
+            border: 1px black solid;                línea,borde exterior de la tabla
+            border-collapse:collapse;               para que no haya líneas dobles en el exterior
+
+        caption {caption, título de la tabla}
+
+        tr {TableRow que signficia la fila horizontal y define el estilo de cada línea} 
+        dentro de cada tr hay: tr>th (capçaleres) o tr>td (contenido)
+
+        th {capçaleres de la tabla}
+             border: 1px black solid;               líneas |, separadores de la primera fila
+             background-color: blue;                para que el fondo de la primera línea tenga color azul 
+
+        td {contenido de la tabla}
+            border: 1px black solid;                líneas interiores de la tabla
+
+
+        button:hover                                [id botó]: hover {background-color} para cambiar el color cuando el cursor pasa por encima
+        *:focus                                     aplicar a todo(*) el focus
+
+        
+    IDENTIFICADORS
+        #header1 {color:cadetblue;}
+        <h1 id="header1"> My first header </h1>
+            os identificadores no se pueden repetir
+
+    CLASS
+        .blue-header {color:blue;}
+        <h1 class = "blue-header" id="header3">My third header </h1>
+        Las clases sí se pueden repetir
+
+    Prioritat: inline, #id, .classes <labels> (etiqueta que en css va sin <>) Contra més específics més prioritat
+                y en cas de ser el mateix, es posará l'últim.
+                Però si hi ha 2 css, agafarà com a prioritat el segon, pero si en el 1r hi ha un #id ho farà,
+                ja que nomès agafarà el segon si hi ha coses repetides.
+                Després hi ha máxima prioritat !important que s'ha d'evitar fer servir
+                
+                És a dir per exemple:
+                1r css h1  none negrita + subrallado + color azul
+                2n css h1  negrita + color rojo
+                Resultado: negrita              porque el 2ndo css tiene prioridad en caso de que haya empate
+                        subrallado              porque en el 2n css no dice nada del subrallado, entonces se mantiene
+                        color rojo              porque el 2ndo css tiene prioridad en caso de que haya empate
+                
+                Però si en 1r css fuera body h1 al ser más específico "body h1" tiene más prioridad y quedaría:
+                        sin negrita, subrallado y color azul.
+                
+
+    SELECTORS
+        ul li {color:yellow}    Pintar yellow todos los li que están dentro de ul
+        ul>li {color:pink;}     Pintar pink todos los li que dependan de ul
+        li + ol{}               adjacent sibling: se pinta si tiene el hermano arriba, se pintaría el ol que tenga un li arriba
+        div~p                   General sibling: se pinta si hay otro hermano en la misma jerarquía (mirar para arriba)    
+        ul,li{color:blue}       Se pintaría las 2 etiquetas del mismo color. La coma "," es una suma.
+    -->
+
+<h1>FORMULARI</h1> 
+
+    <form action="practica1.html"> <!--cuando envies el formulario, te redireccione a ésta página -->
+
+        <div> <!--Es para empaquetar, separar las cosas-->
+            <label for = "formDNI">DNI</label> <!--Se usa la etiqueta  <label for nombrada formDNI para vincularlo con el input id = formDNI-->
+            <input id = "formDNI" type = "Text">    
+
+            <label for = "formEmail">Email</label>      <!--TYPE = email-->
+            <input id = "formEmail" type = "email" placeholder="@gmail.com"> <!--ayuda sobre lo que hay que poner-->
+
+            <label for = "forTel">Telèfon</label>      <!--TYPE = tel-->
+            <input id = "formTel" type = "tel" pattern="[0-9]{9}"> <!--pattern tiene que ser núms del 0 al 9, máximo {9} carácteres-->
+
+            <label for = "formEdad">Edad</label>      <!--TYPE = number-->
+            <input id = "formnEdad" type = "number">
+        </div> 
+
+
+        <div>  
+            <h2>[DROPDOWN]</h2> 
+            <label for="formCity"> Ciutat </label>
+            <select id="formCity">                      <!--DROPDOWN, opcions desplegables-->
+                <option> Barcelona </option>
+                <option> Madrid </option>
+                <option> Málaga </option>
+            </select>
+        </div> <br> <!--para que nos quede espaciado-->
+
+       
+        <div>
+            <h2>[RADIO BUTTONS] Seleccionar buttons</h2>
+            <label for="formGenereD">Dona</label>
+            <input id="formGenereD" type = "radio" name="genere">     <!--RADIO BUTTONS Seleccionar per opcions-->
+            <br>
+
+            <label for="formGenereH">Home</label>
+            <input id="formGenereH" type = "radio" name="genere">   <!--name=genere, se hace para agrupar,-->
+            <br>                                                    <!--no se seleccionen de otro grupo y sólo se pueda seleccionar 1 del grupo-->
+
+            <label for="formGenereA">Altres</label>
+            <input id="formGenereA" type = "radio" name="genere">
+            <br>
+            <br>
+
+            <h2>[CHECKBOX] Seleccionar més d'una opció</h2>  
+            <input id="formDAW" type = "checkbox" name="grau" checked="checked">  <!--checked = Tenga una opción marcada ya por defecto-->
+            <label for="formDAW">DAW</label>         <!-- si ponemos el input primero y luego el label cambia la posición de la casilla -->
+            <br>
+            
+            <input id="formDAM" type = "checkbox" name="grau">
+            <label for="formDAM">DAM</label>
+            <br>
+
+            <input id="formASIX"type = "checkbox" name="grau">
+            <label for="formASIX">ASIX</label>
+            <br>
+
+            <label for="formTerms">Terminos y condiciones</label>
+            <input id="formTerms"type = "checkbox" name="terminos" required>     <!--Requiere marcar ésta casilla sí o sí, o llenar ésa casilla-->
+            <br><br>
+        </div>
+            
+            
+        <div>
+            <h2>[BUTTON] Botons per enviar, anar a un altre lloc</h2>
+            <input type="submit" value="Enviar">                    <!--para hacer el botón de enviar formulario-->
+            <button type = "submit">Botón para enviar</button>      <!--Segunda forma de hacer un button-->
+        </div>
+
+
+        <div>
+            <h2>[CUADRO DE TEXTO]</h2>
+            <label for="formCuadroTexto">Escriba su opinión</label>
+            <br><br>
+            <textarea id="formCuadroTexto" placeholder="Me gustaría saber..." ></textarea>
+        </div>
+
+    </form> <!--Final del Formulario-->
+    
+    <!--POSITION-
+        <span>  para aplicar sólo una parte un estilo diferente
+        em      mida relativa a la font utilizada
+        rem     mida relativa a la font utilitzada a l'etiqueta HTML
+        height: 50vh;   alçada 50%
+        width: 80vw;    amplada 80%
+
+        margin: top right bottom left      
+        padding: top right bottom left     Dentro del cuadrado, cómo para centrar el texto/contenido de dentro, margen interior
+        
+        position: static 
+        position: relative;             Desplaça l'element respecte la seva posició normal
+        top/right/bottom/left 
+        position: absolute;             Ho posa on vulguis però deixa de tenir l'espai assignat  
+        position: fixed;                Está fix tot el temps encara que desplacis la pantalla
+        position: sticky;               relative fins que fas scroll on llavors es quead fixa a la posició indicada 
+    
+    FLEXBOX
+    Ordenar y posicionar un conjunt d'elements
+        justify-content: flex-start;                Posicionar l'element horitzontalment
+                        flex-end;
+                        center;
+                        space-between;              Distribuit desde el principi fins el final
+                        space-around;               Màrge de cada box, el seu espai vital (si té 5cm), la separació entre box será de 10cm
+                        space-evenly;               Espai entre box & box
+
+        align-items:    baseline;                   Alinea el text
+                        flex-start;                 Posiciona l'element verticalment
+                        flex-end;
+                        center;
+                        strech;                     Ho posa tot estret ocupant tot verticalment
+        
+        align-content:  flex-start, flex-end,center, strech, space-between,space-around.
+
+        flex-direction: row;                        Coloca en la misma dirección del texto 
+                        row-reverse;                Dirección opuesta al texto
+                        column;                     Los elementos se colocan de arriba a bajo
+                        column-reverse              Los elementos se colocan de bajo a arriba
+
+        flex-wrap:      nowrap;                     Cada elemento se ajusta en una sóla línea
+                        wrap;                       Los elementos se envuelven alrededor de líneas adicionales
+                        wrap-reverse;              
+        
+        flex-flow: [flex-direction] [flex-wrap]     Combina flex-direction & flex-wrap                          -->        
+
+
+
+</body>
+</html>
