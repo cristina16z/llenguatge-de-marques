@@ -1,0 +1,24 @@
+<!ELEMENT exemple_complert (agenda?,productes?)>
+<!ELEMENT agenda (contacte*,productes*)>
+<!ELEMENT contacte (nom, cognom+, tlf, email?, adreca,comandes)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT cognom (#PCDATA)>
+<!ELEMENT tlf (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT adreca (carrer, num, cp)>
+<!ELEMENT carrer (#PCDATA)>
+<!ELEMENT num (#PCDATA)>
+<!ELEMENT cp (#PCDATA)>
+<!ELEMENT comandes (comanda)>
+<!ELEMENT comanda (productecom)>
+<!ELEMENT productecom (#PCDATA)>
+<!ELEMENT productes (producte+)>
+<!ELEMENT producte (#PCDATA)>
+<!ATTLIST tlf pais CDATA  #REQUIRED>
+<!ATTLIST contacte dni ID  #REQUIRED>
+<!ATTLIST producte id ID  #REQUIRED>
+<!ATTLIST productecom id_prod IDREF #REQUIRED>
+
+
+<!-- el cognom+ significa que en el XML pot haber-hi 1 o més etiquetes <cognom> </cognom>
+     el contacte* significa que pot haber-hi 0 o N etiquetes de <contacte> </contacte>          -->

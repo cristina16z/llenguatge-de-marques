@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE botiga SYSTEM "./stock.dtd">
+<botiga>
+    <!--Tipus de producte que hi ha-->
+    <tipus_producte>
+        <!--Producte amb id-->
+        <normals>
+            <cadira>
+                <!--Dades del producte-->
+                <nom>Dell</nom>
+                <preu>49.99€</preu>
+                <quantitat>67</quantitat>
+            </cadira>
+
+            <cadira>
+                <!--Dades del producte-->
+                <nom>Estoquer</nom>
+                <preu>37.5€</preu>
+                <quantitat>67</quantitat>
+            </cadira>
+        </normals>
+        
+        <!--Seguent tipus-->
+        <rodes>
+            <cadira_rodes id="c4">
+                <nom>Logi</nom>
+                <motor boolean="Si"/>
+                <preu>187.5€</preu>
+                <quantitat>37</quantitat>
+            </cadira_rodes>
+        </rodes>
+    </tipus_producte>
+
+    <socis>
+        <!--Socis que es fan al 2023 (Aquest anys) -->
+        <nous year="2023">
+            <!--Clients-->
+            <client id_producte_comprat="c4">
+                <!--Dades de client-->
+                <nom_client>Paula</nom_client>
+                <adreca>
+                    <!--Dades d'adreca-->
+                    <carrer>Gran via</carrer>
+                    <codi_postal>08020</codi_postal>
+                    <provincia>Barcelona</provincia>
+                </adreca>
+                <!--El id esta associat a cada producte-->
+                <id_producte_comprat>1</id_producte_comprat>
+            </client>
+        </nous>
+        <!--Socis que s'han fet en altre anys-->
+        <antics>
+            <client id_producte_comprat="c4">
+                <nom_client>Marcos</nom_client>
+                <adreca>
+                    <carrer>Gran via</carrer>
+                    <codi_postal>08020</codi_postal>
+                    <provincia>Barcelona</provincia>
+                </adreca>
+                <id_producte_comprat>1</id_producte_comprat>
+            </client>
+        </antics>
+    </socis>
+</botiga>

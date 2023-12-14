@@ -1,0 +1,28 @@
+<!ELEMENT botiga (tipus_producte, socis)>
+<!ELEMENT tipus_producte (normals+, rodes?)>
+<!ELEMENT normals (cadira+)>
+<!ELEMENT cadira (nom, preu, quantitat)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT preu (#PCDATA)>
+<!ELEMENT quantitat (#PCDATA)>
+<!ELEMENT rodes (cadira_rodes)>
+<!ELEMENT cadira_rodes (nom, motor?, preu, quantitat)>
+<!ELEMENT motor (#PCDATA)>
+
+<!ATTLIST motor boolean (Si | No) #REQUIRED>
+<!ATTLIST cadira_rodes id ID #REQUIRED>
+
+<!ELEMENT socis (nous*, antics?)>
+<!ELEMENT nous (client*)>
+<!ATTLIST nous year CDATA #REQUIRED>
+
+<!ELEMENT client (nom_client, adreca, id_producte_comprat)>
+<!ELEMENT nom_client (#PCDATA)>
+<!ELEMENT adreca (carrer, codi_postal, provincia)>
+<!ELEMENT carrer (#PCDATA)>
+<!ELEMENT codi_postal (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>
+<!ELEMENT id_producte_comprat (#PCDATA)>
+<!ELEMENT antics (client+)>
+
+<!ATTLIST client id_producte_comprat IDREF #REQUIRED>

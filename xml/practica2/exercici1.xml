@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<esdeveniments>
+
+    <esdeveniment>
+        <grup>Oques Grasses</grup>
+        <lloc>El moll de la fusta</lloc>
+        <data>2017-09-12 22:30</data>
+        <entrada gratuita="si"></entrada>
+    </esdeveniment>
+
+
+    <esdeveniment>
+        <grup>Zoo</grup>
+        <lloc>Sala Apolo</lloc>
+        <data>2018-01-03 02:45</data>
+        <entrada gratuita="no"></entrada>
+    </esdeveniment>
+
+
+    <esdeveniment>
+        <grup>Txarango</grup>
+        <lloc>El Poble Espanyol
+        <data> 2018-06-24</data>
+        <entrada gratuita="si"></entrada>
+    </esdeveniment>
+
+
+</esdeveniments>
+
+
+<!ELEMENT esdeveniments (esdeveniment*)>
+<!ELEMENT esdeveniment (grup, lloc, data, entrada)>
+<!ELEMENT grup (#PCDATA)>
+<!ELEMENT lloc (#PCDATA)>
+<!ELEMENT data (#PCDATA)>
+<!ELEMENT entrada>
+<!ATTLIST entrada gratuita (si | no ) #REQUIRED>
