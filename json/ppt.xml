@@ -1,0 +1,100 @@
+<!-- exercici 1 de Json a XML-->
+{
+"fonts": [
+            {"nom": "Roboto", "mida": 14, "estil": "normal"},
+            {"nom": "Mono", "mida": 12, "estil": "negreta"}
+        ]
+
+}
+
+
+<fonts>
+    <font>
+        <nom>Roboto</nom>
+        <mida>14</mida>
+        <estil>normal</estil>
+    </font>
+
+    <font>
+        <nom>Mono</nom>
+        <mida>12</mida>
+        <estil>negreta</estil>
+    </font>
+
+</fonts>
+
+
+
+<!-- exercici 2 de Json a XML-->
+
+{
+"idioma": "català",
+"tema": "fosc",
+"notificacions": {"actividades": true, "to" : "predeterminat"},
+"preferencias": {"mostra_publicitat": false, "ordre_menu": ["perfil", "config", "ajuda"]},
+}
+
+
+<configuracio>
+    <idioma>Català</idioma>
+    <tema>Fosc</tema>
+
+    <notificacions>
+        <actividades>boolean</actividades>
+        <to>predeterminat</to>
+    </notificacions>
+
+    <preferencies mostra_publicitat="false">       
+            <menu>perfil</menu>
+            <menu>config</menu>
+            <menu>ajuda</menu>  
+    </preferencies>
+</configuracio>
+
+
+
+<!-- exercici 3 de XML a Json-->
+
+<cotxe marca = "toyota">
+    <model tipus ="sedan">Camry</model>
+    <any>2022</any>
+    <preu moneda = "EUR">25000</preu>
+</cotxe>
+
+
+{
+    "cotxe" : {
+        "marca": "Toyota",
+        "model" :"camry",
+        "any" : 2022,
+        "preu": {
+            "moneda" : "EUR",
+            "quantitat" : 25000
+        }
+    }
+}
+
+
+<!-- exercici 4  de XML a Json-->
+
+<classe>
+    <alumne matricula = "A123" edat = "22" > Maria</alumne>
+    <alumne matricula = "B456" edat = "21" > Pere</alumne>
+    <professor departament = "Matemàtiques">Dra.Martínez</professor>
+</classe>
+
+{
+    "classe":{ 
+        "alumnes":[
+                    { "matricula": "A123", "edat": "22", "nom": "Maria" }
+                    { "matricula": "B456", "edat": "21", "nom": "Pere"}
+        ],
+
+        "professor": {
+            "departament": "matemàtiques",
+            "nom": "Dra.Martínez"
+        }
+    }
+
+
+}
